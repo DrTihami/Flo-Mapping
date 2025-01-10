@@ -1,6 +1,7 @@
 import streamlit as st
 import pandas as pd
 import numpy as np
+import scikit-learn as sklearn
 from sklearn.neighbors import BallTree
 
 # Load the data
