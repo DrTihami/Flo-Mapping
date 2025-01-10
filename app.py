@@ -3,13 +3,8 @@ import pandas as pd
 import numpy as np
 from sklearn.neighbors import BallTree
 
-# Load FLO data from a CSV file
-@st.cache
-def load_data():
-    return pd.read_csv("dataset.csv")
-
 # Load the data
-flo_data = load_data()
+flo_data = pd.read_csv('FLO_Mapped_df')
 
 # Check if the necessary columns exist
 if 'Flo_Latitude' in flo_data.columns and 'Flo_Longitude' in flo_data.columns:
@@ -33,7 +28,7 @@ if 'Flo_Latitude' in flo_data.columns and 'Flo_Longitude' in flo_data.columns:
     nearest_flo = flo_data.iloc[nearest_flo_idx]
     st.write(f"Nearest FLO to Farmer at ({farmer_lat}, {farmer_lon}):")
     st.write(f"**FLO Name**: {nearest_flo['Flo_Name']}")
-    st.write(f"**FLO Block**: {nearest_flo['Flo_Address']}")
+    st.write(f"**FLO Address **: {nearest_flo['Flo_Address']}")
     st.write(f"**FLO District**: {nearest_flo['Flo_District']}")
     st.write(f"**Distance**: {distances[0][0] * 6371:.2f} km")
 else:
