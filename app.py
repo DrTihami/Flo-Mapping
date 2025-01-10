@@ -37,7 +37,7 @@ if 'Flo_Latitude' in flo_data.columns and 'Flo_Longitude' in flo_data.columns:
         """
         <div style="background-color: #E6F7FF; padding: 10px; border-radius: 5px; margin-top: 10px;">
             <h3 style="color: #004085; text-align: center; font-size: 18px;">
-                Objective of Application: This application helps find the nearest Field Level Officer for farmers based on their latitude and longitude coordinates.
+                Objective of Application: This application helps find the nearest Field Level Officer for farmers based on their latitude and longitude coordinates. JKVDA Kashmir Courtesy.
             </h3>
         </div>
         """,
