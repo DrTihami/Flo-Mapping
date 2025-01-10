@@ -32,6 +32,18 @@ if 'Flo_Latitude' in flo_data.columns and 'Flo_Longitude' in flo_data.columns:
         unsafe_allow_html=True,
     )
 
+    # Subheading with smaller font size
+    st.markdown(
+        """
+        <div style="background-color: #E6F7FF; padding: 10px; border-radius: 5px; margin-top: 10px;">
+            <h3 style="color: #004085; text-align: center; font-size: 18px;">
+                Objective of Application: This application helps find the nearest Field Level Officer for farmers based on their latitude and longitude coordinates.
+            </h3>
+        </div>
+        """,
+        unsafe_allow_html=True,
+    )
+
     # Get farmer location from user
     farmer_lat = st.number_input(
         "Enter Farmer Latitude",
@@ -42,8 +54,8 @@ if 'Flo_Latitude' in flo_data.columns and 'Flo_Longitude' in flo_data.columns:
     )
     farmer_lon = st.number_input(
         "Enter Farmer Longitude",
-        min_value=73.30000,
-        max_value=75.80000,
+        min_value=73.50000,
+        max_value=75.50000,
         value=74.87782,
         format="%.5f"
     )
